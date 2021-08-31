@@ -1,1 +1,13 @@
-<p>movie-row works!</p>
+<div class="movieRow">
+    <h2>{{title}}</h2>
+    <div class="movieRow--listarea">
+        <div style="display: inline-flex;" *ngIf="items.results.length > 0">
+            <div class="movieRow--list" *ngFor="let dado of items.results">
+                <div class="movieRow--item">
+                    <img src="https://image.tmdb.org/t/p/w300{{dado.poster_path}}" alt="{{dado.original_title}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

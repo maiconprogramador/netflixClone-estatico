@@ -1,6 +1,5 @@
 <div class="lists">
     <div *ngFor="let item of lista">
-        <div><app-movie-row></app-movie-row></div>
+        <div><app-movie-row [title]="item.title" [items]="item.items"></app-movie-row></div>
     </div>
-
 </div>
