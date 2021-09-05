@@ -13,16 +13,8 @@ export class MovieRowComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.items)
-
   }
-  // ngAfterContentInit(){
-  //   if (this.items) {
-  //     this.items.forEach(lista => {
-        
-  //     });
-  //   }
-  // }
+ 
 
   
 }

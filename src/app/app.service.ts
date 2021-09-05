@@ -74,6 +74,23 @@ export class AppService {
       }
     ];
   }
+  async getMovieInfo(movieId: number, type: string) {
+    let info = {};
+    if (movieId) {
+      switch (type) {
+        case 'movie':
+          info = await this.basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${this.API_KEY}`).toPromise()
+          break;
+        case 'tv':
+          info = await this.basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${this.API_KEY}`).toPromise()
+          break;
+        default:
+          info = {};
+          break;
+      }
+    }
+    return info;
+  }
 
     
 }

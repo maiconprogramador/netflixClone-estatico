@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { MovieRowComponent } from './home/movie-row/movie-row.component';
+import { FeaturedMovieComponent } from './home/featured-movie/featured-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MovieRowComponent
+    MovieRowComponent,
+    FeaturedMovieComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,10 @@
-<div class="lists">
-    <div *ngFor="let item of lista">
-        <div><app-movie-row [title]="item.title" [items]="item.items"></app-movie-row></div>
+<div class="page">
+    <div *ngIf="featuredData">
+        <app-featured-movie [item]="featuredData"></app-featured-movie>
+    </div>
+    <div class="lists">
+        <div *ngFor="let item of lista">
+            <div><app-movie-row [title]="item.title" [items]="item.items"></app-movie-row></div>
+        </div>
     </div>
 </div>
