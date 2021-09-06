@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { MovieRowComponent } from './home/movie-row/movie-row.component';
 import { FeaturedMovieComponent } from './home/featured-movie/featured-movie.component';
+import { HeaderComponent } from './home/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MovieRowComponent,
-    FeaturedMovieComponent
+    FeaturedMovieComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

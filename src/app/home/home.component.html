@@ -1,10 +1,23 @@
 <div class="page">
+    <!-- Header Logo com Icone de Usuario -->
+    <header>
+        <app-header [blackHeader]="blackHeader"></app-header>
+    </header>
+    <!-- Informações sobre um filme selecionado aleatoriamente, antes da lista de filmes -->
     <div *ngIf="featuredData">
         <app-featured-movie [item]="featuredData"></app-featured-movie>
     </div>
+    <!-- Lista de Filmes contendo os cards -->
     <div class="lists">
         <div *ngFor="let item of lista">
             <div><app-movie-row [title]="item.title" [items]="item.items"></app-movie-row></div>
         </div>
     </div>
+    <footer>
+        Feito Por:  Maicon Emanuel Neris Silva<br/>
+        Inspirado em um video em REACTJS do canal Bonieky Lacerda! <br/>
+        Direitos de Imagem para NetFlix <br/>
+        Dados pegos do site Themoviedb.org
+
+    </footer>
 </div>

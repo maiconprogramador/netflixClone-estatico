@@ -10,8 +10,24 @@ export class HomeComponent implements OnInit {
   constructor(private service: AppService) { }
   lista: any;
   featuredData: any;
+  blackHeader: any;
   
   ngOnInit(): void {
+    
+  }
+
+  ngAfterViewInit() {
+    let  scrollListener = () => {
+      if (window.scrollY > 10) {
+        this.blackHeader = true;
+      } else {
+        this.blackHeader = false;
+      }
+    }
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
   }
   ngAfterContentInit(){
     this.service.getHomeList()
